@@ -15,8 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        customizeAppearance()
+        
         return true
+    }
+    
+    // MARK - App Theme Customization
+    
+    private func customizeAppearance() {
+        window?.tintColor = UIColor.black
+        UISearchBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue) : UIColor.white]
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

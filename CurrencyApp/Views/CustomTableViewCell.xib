@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="CurrencyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="406" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USD" translatesAutoresizingMaskIntoConstraints="NO" id="31y-7t-W3b">
+                        <rect key="frame" x="10" y="28.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="R2Q-cK-IWB"/>
+                            <constraint firstAttribute="width" constant="50" id="S02-jv-XK3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEW-9h-Xrb">
+                        <rect key="frame" x="70" y="28.5" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="zXf-gF-zlM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unated States dollar" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWh-KL-xjC">
+                        <rect key="frame" x="70" y="52.5" width="150" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="c0s-Ns-gzg"/>
+                            <constraint firstAttribute="height" constant="26" id="fsw-NA-pL1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120.340" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wq-YF-hhg">
+                        <rect key="frame" x="333.5" y="65.5" width="62.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="3HX-dq-JL9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-mF-87r">
+                        <rect key="frame" x="346" y="86.5" width="50" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="cnP-qQ-r9G"/>
+                            <constraint firstAttribute="width" constant="50" id="oMJ-1G-xF1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="31y-7t-W3b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4nJ-Ll-uVn"/>
+                    <constraint firstItem="31y-7t-W3b" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HZI-xV-boU"/>
+                    <constraint firstItem="1Ux-mF-87r" firstAttribute="top" secondItem="7wq-YF-hhg" secondAttribute="bottom" id="LAR-6R-zay"/>
+                    <constraint firstItem="JEW-9h-Xrb" firstAttribute="trailing" secondItem="dWh-KL-xjC" secondAttribute="trailing" id="NsR-dz-mQk"/>
+                    <constraint firstAttribute="bottom" secondItem="7wq-YF-hhg" secondAttribute="bottom" constant="20" id="PUF-RN-mKj"/>
+                    <constraint firstItem="1Ux-mF-87r" firstAttribute="trailing" secondItem="7wq-YF-hhg" secondAttribute="trailing" id="aqo-LU-r5W"/>
+                    <constraint firstItem="JEW-9h-Xrb" firstAttribute="leading" secondItem="31y-7t-W3b" secondAttribute="trailing" constant="10" id="cqN-0J-G1I"/>
+                    <constraint firstItem="dWh-KL-xjC" firstAttribute="top" secondItem="JEW-9h-Xrb" secondAttribute="bottom" constant="4" id="gX0-DK-HqK"/>
+                    <constraint firstItem="dWh-KL-xjC" firstAttribute="leading" secondItem="JEW-9h-Xrb" secondAttribute="leading" id="m1w-n6-y8E"/>
+                    <constraint firstItem="JEW-9h-Xrb" firstAttribute="top" secondItem="31y-7t-W3b" secondAttribute="top" id="rcT-ia-5bm"/>
+                    <constraint firstAttribute="trailing" secondItem="7wq-YF-hhg" secondAttribute="trailing" constant="10" id="xih-MM-aYa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="charCodeLabel" destination="JEW-9h-Xrb" id="2a2-zV-jWN"/>
+                <outlet property="countryIcon" destination="31y-7t-W3b" id="tUm-CC-MJB"/>
+                <outlet property="nameLabel" destination="dWh-KL-xjC" id="6Qb-in-8uq"/>
+                <outlet property="underlineView" destination="1Ux-mF-87r" id="Dg6-4i-5gi"/>
+                <outlet property="valueLabel" destination="7wq-YF-hhg" id="Fpq-3W-MHO"/>
+            </connections>
+            <point key="canvasLocation" x="206.40000000000001" y="183.05847076461771"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="USD" width="48" height="48"/>
+    </resources>
+</document>

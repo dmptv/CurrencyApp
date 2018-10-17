@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D24787E2177398300B0A587 /* Valute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24787D2177398300B0A587 /* Valute.swift */; };
+		9D24788121773BB100B0A587 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788021773BB100B0A587 /* ResponseObject.swift */; };
+		9D2478852177474400B0A587 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2478842177474400B0A587 /* DataManager.swift */; };
 		9DA7048D2177007800113B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7048C2177007800113B38 /* AppDelegate.swift */; };
-		9DA7048F2177007800113B38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7048E2177007800113B38 /* ViewController.swift */; };
+		9DA7048F2177007800113B38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7048E2177007800113B38 /* MainViewController.swift */; };
 		9DA704922177007800113B38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA704902177007800113B38 /* Main.storyboard */; };
 		9DA704942177007900113B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA704932177007900113B38 /* Assets.xcassets */; };
 		9DA704972177007900113B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA704952177007900113B38 /* LaunchScreen.storyboard */; };
+		9DA7049F21771D7F00113B38 /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7049E21771D7F00113B38 /* UIStoryboard+Storyboards.swift */; };
+		9DA704A121771DA100113B38 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA704A021771DA100113B38 /* StoryboardIdentifiable.swift */; };
+		9DA704A321771DCC00113B38 /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA704A221771DCC00113B38 /* UIViewController+Extentions.swift */; };
+		9DA704A82177215F00113B38 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA704A62177215F00113B38 /* CustomTableViewCell.swift */; };
+		9DA704A92177215F00113B38 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DA704A72177215F00113B38 /* CustomTableViewCell.xib */; };
+		9DA704AD21772E1400113B38 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA704AC21772E1400113B38 /* App.swift */; };
+		9DA704AF217733C000113B38 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA704AE217733C000113B38 /* ReuseIdentifierProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D24787D2177398300B0A587 /* Valute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valute.swift; sourceTree = "<group>"; };
+		9D24788021773BB100B0A587 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
+		9D2478842177474400B0A587 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9DA704892177007800113B38 /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA7048C2177007800113B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9DA7048E2177007800113B38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DA7048E2177007800113B38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9DA704912177007800113B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DA704932177007900113B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DA704962177007900113B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DA704982177007900113B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA7049E21771D7F00113B38 /* UIStoryboard+Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboards.swift"; sourceTree = "<group>"; };
+		9DA704A021771DA100113B38 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		9DA704A221771DCC00113B38 /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
+		9DA704A62177215F00113B38 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		9DA704A72177215F00113B38 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		9DA704AC21772E1400113B38 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		9DA704AE217733C000113B38 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D24787F21773A2500B0A587 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D24787D2177398300B0A587 /* Valute.swift */,
+				9D24788021773BB100B0A587 /* ResponseObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9DA704802177007800113B38 = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +84,54 @@
 			isa = PBXGroup;
 			children = (
 				9DA7048C2177007800113B38 /* AppDelegate.swift */,
-				9DA7048E2177007800113B38 /* ViewController.swift */,
-				9DA704902177007800113B38 /* Main.storyboard */,
+				9DA704AC21772E1400113B38 /* App.swift */,
+				9D2478842177474400B0A587 /* DataManager.swift */,
+				9D24787F21773A2500B0A587 /* Model */,
+				9DA704A521771E2300113B38 /* Controllers */,
+				9DA704A421771DF700113B38 /* Protocols */,
+				9DA704AB21772D0300113B38 /* Storyboard */,
+				9DA704AA21772CF600113B38 /* Views */,
 				9DA704932177007900113B38 /* Assets.xcassets */,
 				9DA704952177007900113B38 /* LaunchScreen.storyboard */,
 				9DA704982177007900113B38 /* Info.plist */,
 			);
 			path = CurrencyApp;
+			sourceTree = "<group>";
+		};
+		9DA704A421771DF700113B38 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9DA7049E21771D7F00113B38 /* UIStoryboard+Storyboards.swift */,
+				9DA704A221771DCC00113B38 /* UIViewController+Extentions.swift */,
+				9DA704A021771DA100113B38 /* StoryboardIdentifiable.swift */,
+				9DA704AE217733C000113B38 /* ReuseIdentifierProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9DA704A521771E2300113B38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9DA7048E2177007800113B38 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9DA704AA21772CF600113B38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DA704A62177215F00113B38 /* CustomTableViewCell.swift */,
+				9DA704A72177215F00113B38 /* CustomTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9DA704AB21772D0300113B38 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9DA704902177007800113B38 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +194,7 @@
 			files = (
 				9DA704972177007900113B38 /* LaunchScreen.storyboard in Resources */,
 				9DA704942177007900113B38 /* Assets.xcassets in Resources */,
+				9DA704A92177215F00113B38 /* CustomTableViewCell.xib in Resources */,
 				9DA704922177007800113B38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +206,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA7048F2177007800113B38 /* ViewController.swift in Sources */,
+				9DA704A82177215F00113B38 /* CustomTableViewCell.swift in Sources */,
+				9D24788121773BB100B0A587 /* ResponseObject.swift in Sources */,
+				9DA704AF217733C000113B38 /* ReuseIdentifierProtocol.swift in Sources */,
+				9DA704A121771DA100113B38 /* StoryboardIdentifiable.swift in Sources */,
+				9DA7048F2177007800113B38 /* MainViewController.swift in Sources */,
 				9DA7048D2177007800113B38 /* AppDelegate.swift in Sources */,
+				9DA704A321771DCC00113B38 /* UIViewController+Extentions.swift in Sources */,
+				9DA704AD21772E1400113B38 /* App.swift in Sources */,
+				9D2478852177474400B0A587 /* DataManager.swift in Sources */,
+				9D24787E2177398300B0A587 /* Valute.swift in Sources */,
+				9DA7049F21771D7F00113B38 /* UIStoryboard+Storyboards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kanat.CurrencyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kanat.Blocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +387,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kanat.CurrencyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kanat.Blocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
