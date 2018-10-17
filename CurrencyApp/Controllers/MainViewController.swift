@@ -29,7 +29,6 @@ class MainViewController: UIViewController {
                 self?.valutes = currencies
                 self?.tableView.reloadData()
             }
-            
         }
     }
 
@@ -48,6 +47,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row == 0 {
             cell.underlineView.backgroundColor = .red
+        } else {
+            cell.underlineView.backgroundColor = .black
         }
         
         cell.nameLabel.text = valute.name

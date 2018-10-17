@@ -30,7 +30,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="zXf-gF-zlM"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

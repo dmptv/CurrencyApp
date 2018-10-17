@@ -14,10 +14,10 @@ struct App {
     // MARK: - Strings
     
     struct String {
-        private static let devBaseUrl = "https://api.vk.com/method/"
-        private static let prodBaseUrl = "https://api.vk.com/method/"
+        private static let devBaseUrl = "https://www.cbr-xml-daily.ru/daily_json.js"
+        private static let prodBaseUrl = "https://www.cbr-xml-daily.ru/daily_json.js"
         
-        static var baseUrl: Swift.String {
+        private static var baseUrl: Swift.String {
             return Environment.current == .production ? prodBaseUrl : devBaseUrl
         }
         
