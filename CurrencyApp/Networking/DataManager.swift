@@ -37,7 +37,7 @@ class DataManager {
         if let i = valutes.firstIndex(where: { $0.charCode == charCode }) {
             let valute = valutes[i]
             valutes.remove(at: i)
-            valutes.insert(valute, at: valutes.endIndex)
+            valutes.insert(valute, at: valutes.startIndex)
             return valutes
         }
         return valutes

@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var currentCharcodeLabel: UILabel!
     
     var valutes: [Valute] = []
     
@@ -21,6 +22,12 @@ class MainViewController: UIViewController {
         
         tableView.estimatedRowHeight = CGFloat(App.Int.heightMainCell)
         tableView.backgroundColor = UIColor.darkGray
+        currentCharcodeLabel = UILabel()
+        currentCharcodeLabel.text = "USD"
+        currentCharcodeLabel.textColor = .white
+        currentCharcodeLabel.font = UIFont.systemFont(ofSize: 14)
+        currentCharcodeLabel.sizeToFit()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: currentCharcodeLabel)
         
         let cellNib = UINib(nibName: CustomTableViewCell.defaultReuseIdentifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: CustomTableViewCell.defaultReuseIdentifier)
@@ -85,10 +92,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         valutes.remove(at: indexPath.row)
         valutes.insert(valute, at: 0)
         
+        DispatchQueue.main.async { [weak self] in
+            self?.currentCharcodeLabel.text = valute.charCode
+            self?.currentCharcodeLabel.sizeToFit()
+        }
+        
         _ = tableView.cellForRow(at: indexPath) as! CustomTableViewCell
-        
         tableView.reloadData()
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
