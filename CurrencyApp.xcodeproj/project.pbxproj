@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9D24787E2177398300B0A587 /* Valute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24787D2177398300B0A587 /* Valute.swift */; };
-		9D24788121773BB100B0A587 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788021773BB100B0A587 /* ResponseObject.swift */; };
 		9D2478852177474400B0A587 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2478842177474400B0A587 /* DataManager.swift */; };
 		9D24788821775F1C00B0A587 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788721775F1C00B0A587 /* QueryService.swift */; };
 		9D24788C21777ECA00B0A587 /* Image+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788B21777ECA00B0A587 /* Image+Extentions.swift */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		9D24787D2177398300B0A587 /* Valute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valute.swift; sourceTree = "<group>"; };
-		9D24788021773BB100B0A587 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		9D2478842177474400B0A587 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9D24788721775F1C00B0A587 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		9D24788B21777ECA00B0A587 /* Image+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extentions.swift"; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				9D24787D2177398300B0A587 /* Valute.swift */,
-				9D24788021773BB100B0A587 /* ResponseObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA704A82177215F00113B38 /* CustomTableViewCell.swift in Sources */,
-				9D24788121773BB100B0A587 /* ResponseObject.swift in Sources */,
 				9DA704AF217733C000113B38 /* ReuseIdentifierProtocol.swift in Sources */,
 				9D24788821775F1C00B0A587 /* QueryService.swift in Sources */,
 				9DA704A121771DA100113B38 /* StoryboardIdentifiable.swift in Sources */,

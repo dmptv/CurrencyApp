@@ -21,15 +21,26 @@ class DataManager {
                 }
                 
                 if let valutes = valutes {
+                    let sortedValutes = moveCharCodeToEnd(valutes)
                     DispatchQueue.main.async {
-                        completion(valutes)
+                        completion(sortedValutes)
                     }
                 }
                 
-                print(QueryService.charCodeKeys)
             })
            
         }
+    }
+    
+    static func moveCharCodeToEnd(_ valutes: [Valute], charCode: String = "USD") ->  [Valute] {
+        var valutes = valutes
+        if let i = valutes.firstIndex(where: { $0.charCode == charCode }) {
+            let valute = valutes[i]
+            valutes.remove(at: i)
+            valutes.insert(valute, at: valutes.endIndex)
+            return valutes
+        }
+        return valutes
     }
     
 }

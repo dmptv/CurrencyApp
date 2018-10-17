@@ -8,8 +8,6 @@
 
 import Foundation
 
-/// скачивает из сети данные по адресу, который
-/// строится из базовой строки и параметров
 class QueryService {
     
     typealias JSONDictionary = [String: Any]

@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
     
     var valutes: [Valute] = []
     
+    var currentValue: Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,6 +90,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.reloadData()
         
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    private func recalculate() {
+        
     }
     
 }
