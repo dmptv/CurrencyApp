@@ -19,24 +19,42 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        reload()
+        setupViews()
+    }
+    
+    //MARK: - Setup Views
+    
+    private func setupViews() {
+        setupTableView()
+        setupNavbar()
+    }
+    
+    private func setupTableView() {
         tableView.estimatedRowHeight = CGFloat(App.Int.heightMainCell)
         tableView.backgroundColor = UIColor.darkGray
+        let cellNib = UINib(nibName: CustomTableViewCell.defaultReuseIdentifier, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: CustomTableViewCell.defaultReuseIdentifier)
+    }
+    
+    private func setupNavbar() {
         currentCharcodeLabel = UILabel()
-        currentCharcodeLabel.text = "USD"
         currentCharcodeLabel.textColor = .white
         currentCharcodeLabel.font = UIFont.systemFont(ofSize: 14)
         currentCharcodeLabel.sizeToFit()
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: currentCharcodeLabel)
-        
-        let cellNib = UINib(nibName: CustomTableViewCell.defaultReuseIdentifier, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: CustomTableViewCell.defaultReuseIdentifier)
-
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(reload))
+    }
+    
+    @objc
+    private func reload() {
         DataManager.getData { currencies in
             DispatchQueue.main.async { [weak self] in
-                
                 self?.valutes = currencies
                 self?.tableView.reloadData()
+                self?.currentCharcodeLabel.text = "USD"
+                self?.currentCharcodeLabel.sizeToFit()
             }
         }
     }
@@ -90,7 +108,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let valute = valutes[indexPath.row]
         
         valutes.remove(at: indexPath.row)
-        valutes.insert(valute, at: 0)
+        valutes.insert(valute, at: valutes.startIndex)
         
         DispatchQueue.main.async { [weak self] in
             self?.currentCharcodeLabel.text = valute.charCode
