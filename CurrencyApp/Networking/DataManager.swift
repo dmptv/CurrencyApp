@@ -26,7 +26,7 @@ class DataManager {
                     }
                 }
                 
-                
+                print(QueryService.charCodeKeys)
             })
            
         }

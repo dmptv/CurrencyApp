@@ -26,7 +26,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEW-9h-Xrb">
-                        <rect key="frame" x="70" y="28.5" width="150" height="20"/>
+                        <rect key="frame" x="70" y="28.5" width="214" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="zXf-gF-zlM"/>
                         </constraints>
@@ -35,19 +35,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unated States dollar" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWh-KL-xjC">
-                        <rect key="frame" x="70" y="52.5" width="150" height="26"/>
+                        <rect key="frame" x="70" y="52.5" width="214" height="26"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="c0s-Ns-gzg"/>
                             <constraint firstAttribute="height" constant="26" id="fsw-NA-pL1"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120.340" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wq-YF-hhg">
-                        <rect key="frame" x="333.5" y="65.5" width="62.5" height="21"/>
+                        <rect key="frame" x="296" y="65.5" width="100" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="3HX-dq-JL9"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="3HX-dq-JL9"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.27450981740000002" green="0.48627451059999999" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,6 +61,7 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="7wq-YF-hhg" firstAttribute="leading" secondItem="dWh-KL-xjC" secondAttribute="trailing" constant="12" id="2Mj-Bz-L5k"/>
                     <constraint firstItem="31y-7t-W3b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4nJ-Ll-uVn"/>
                     <constraint firstItem="31y-7t-W3b" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HZI-xV-boU"/>
                     <constraint firstItem="1Ux-mF-87r" firstAttribute="top" secondItem="7wq-YF-hhg" secondAttribute="bottom" id="LAR-6R-zay"/>

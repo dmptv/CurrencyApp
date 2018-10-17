@@ -21,6 +21,8 @@ class QueryService {
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     
+    static var charCodeKeys: [String] = []
+    
     func getCurrency(urlStr: String, completion: @escaping QueryResult) {
         dataTask?.cancel()
        
@@ -61,11 +63,13 @@ class QueryService {
             errorMessage += "Dictionary does not contain results key\n"
             return
         }
+
         
         dictionary.keys.forEach { key in
             let object: JSONDictionary = dictionary[key] as! QueryService.JSONDictionary
             let valute = Valute.init(with: object)
             valutes.append(valute)
+            QueryService.charCodeKeys.append(key)
         }
       
     }

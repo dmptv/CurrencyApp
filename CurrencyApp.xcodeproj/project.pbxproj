@@ -10,7 +10,8 @@
 		9D24787E2177398300B0A587 /* Valute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24787D2177398300B0A587 /* Valute.swift */; };
 		9D24788121773BB100B0A587 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788021773BB100B0A587 /* ResponseObject.swift */; };
 		9D2478852177474400B0A587 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2478842177474400B0A587 /* DataManager.swift */; };
-		9D24788821775F1C00B0A587 /* NetDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788721775F1C00B0A587 /* NetDataProvider.swift */; };
+		9D24788821775F1C00B0A587 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788721775F1C00B0A587 /* QueryService.swift */; };
+		9D24788C21777ECA00B0A587 /* Image+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788B21777ECA00B0A587 /* Image+Extentions.swift */; };
 		9DA7048D2177007800113B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7048C2177007800113B38 /* AppDelegate.swift */; };
 		9DA7048F2177007800113B38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7048E2177007800113B38 /* MainViewController.swift */; };
 		9DA704922177007800113B38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA704902177007800113B38 /* Main.storyboard */; };
@@ -29,7 +30,8 @@
 		9D24787D2177398300B0A587 /* Valute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valute.swift; sourceTree = "<group>"; };
 		9D24788021773BB100B0A587 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		9D2478842177474400B0A587 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		9D24788721775F1C00B0A587 /* NetDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetDataProvider.swift; sourceTree = "<group>"; };
+		9D24788721775F1C00B0A587 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		9D24788B21777ECA00B0A587 /* Image+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extentions.swift"; sourceTree = "<group>"; };
 		9DA704892177007800113B38 /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA7048C2177007800113B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA7048E2177007800113B38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -70,9 +72,18 @@
 			isa = PBXGroup;
 			children = (
 				9D2478842177474400B0A587 /* DataManager.swift */,
-				9D24788721775F1C00B0A587 /* NetDataProvider.swift */,
+				9D24788721775F1C00B0A587 /* QueryService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		9D24788D21777ED900B0A587 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				9DA704A221771DCC00113B38 /* UIViewController+Extentions.swift */,
+				9D24788B21777ECA00B0A587 /* Image+Extentions.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		9DA704802177007800113B38 = {
@@ -99,6 +110,7 @@
 				9D24788621775F0A00B0A587 /* Networking */,
 				9D24787F21773A2500B0A587 /* Model */,
 				9DA704A521771E2300113B38 /* Controllers */,
+				9D24788D21777ED900B0A587 /* Extentions */,
 				9DA704A421771DF700113B38 /* Protocols */,
 				9DA704AB21772D0300113B38 /* Storyboard */,
 				9DA704AA21772CF600113B38 /* Views */,
@@ -113,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				9DA7049E21771D7F00113B38 /* UIStoryboard+Storyboards.swift */,
-				9DA704A221771DCC00113B38 /* UIViewController+Extentions.swift */,
 				9DA704A021771DA100113B38 /* StoryboardIdentifiable.swift */,
 				9DA704AE217733C000113B38 /* ReuseIdentifierProtocol.swift */,
 			);
@@ -220,11 +231,12 @@
 				9DA704A82177215F00113B38 /* CustomTableViewCell.swift in Sources */,
 				9D24788121773BB100B0A587 /* ResponseObject.swift in Sources */,
 				9DA704AF217733C000113B38 /* ReuseIdentifierProtocol.swift in Sources */,
-				9D24788821775F1C00B0A587 /* NetDataProvider.swift in Sources */,
+				9D24788821775F1C00B0A587 /* QueryService.swift in Sources */,
 				9DA704A121771DA100113B38 /* StoryboardIdentifiable.swift in Sources */,
 				9DA7048F2177007800113B38 /* MainViewController.swift in Sources */,
 				9DA7048D2177007800113B38 /* AppDelegate.swift in Sources */,
 				9DA704A321771DCC00113B38 /* UIViewController+Extentions.swift in Sources */,
+				9D24788C21777ECA00B0A587 /* Image+Extentions.swift in Sources */,
 				9DA704AD21772E1400113B38 /* App.swift in Sources */,
 				9D2478852177474400B0A587 /* DataManager.swift in Sources */,
 				9D24787E2177398300B0A587 /* Valute.swift in Sources */,

@@ -31,8 +31,20 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
+    //MARK: - Helpers
 
-
+    private func setupFlags(cell: CustomTableViewCell, valute: Valute) {
+        
+        let charCode = valute.charCode
+        if QueryService.charCodeKeys.contains(charCode) {
+            if let image = UIImage(named: charCode) {
+                cell.countryIcon.image = image.withRenderingMode(.alwaysOriginal)
+            } else {
+                cell.countryIcon.image = UIImage(named: "unknown")?.withRenderingMode(.alwaysOriginal)
+            }
+        }
+    }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
@@ -54,6 +66,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nameLabel.text = valute.name
         cell.charCodeLabel.text = valute.charCode
         cell.valueLabel.text = "\(valute.value)"
+        
+        setupFlags(cell: cell, valute: valute)
         
         return cell
         
