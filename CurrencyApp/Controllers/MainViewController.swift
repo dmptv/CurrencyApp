@@ -104,7 +104,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 // show alert
                 
                 let alertController = UIAlertController(title: errorStr,
-                                                        cancelTitle: "")
+                                                        cancelTitle: "OK")
                 
                 self.present(alertController, animated: true, completion: nil)
             }
