@@ -11,7 +11,8 @@ import Foundation
 class QueryService {
     
     typealias JSONDictionary = [String: Any]
-    typealias QueryResult = ([Valute]?, String) -> ()
+    typealias QueryResult = ([Valute]?, String) -> Void
+    typealias QueryRates = (Double?, String) -> Void
     
     var valutes: [Valute] = []
     var errorMessage = ""
@@ -20,6 +21,35 @@ class QueryService {
     var dataTask: URLSessionDataTask?
     
     static var charCodeKeys: [String] = []
+    
+    func getRates(inputCharCode: String, baseCharCode: String, completion: @escaping QueryRates) {
+        let strQuery = "\(baseCharCode)" + "_" + "\(inputCharCode)"
+        dataTask?.cancel()
+
+        // https://free.currencyconverterapi.com/api/v6/convert?q=KZT_USD&compact=ultra
+        
+        guard let url = URL(string: "https://free.currencyconverterapi.com/api/v6/convert?q=\(strQuery)&compact=ultra") else { return } // USD_RUB
+        
+        dataTask = defaultSession.dataTask(with: url) { data, response, error in
+            defer { self.dataTask = nil }
+
+            if error != nil {
+                
+            } else if let data = data,
+                let response = response as? HTTPURLResponse,
+                response.statusCode == 200 {
+                
+                let resRate = try! JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
+                
+                if let resRate = resRate {
+                    
+                    completion(resRate[resRate.keys.first!] as? Double, "")
+
+                }
+            }
+        }
+        dataTask?.resume()
+    }
     
     func getCurrency(urlStr: String, completion: @escaping QueryResult) {
         dataTask?.cancel()

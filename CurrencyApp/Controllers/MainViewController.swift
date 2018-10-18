@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -15,13 +16,19 @@ class MainViewController: UIViewController {
     
     var valutes: [Valute] = []
     
-    var currentValue: Double = 0
+    var currentCharcode = "USD"
+    var nominal: Double = 1
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         reload()
         setupViews()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     //MARK: - Setup Views
@@ -44,7 +51,6 @@ class MainViewController: UIViewController {
         currentCharcodeLabel.font = UIFont.systemFont(ofSize: 14)
         currentCharcodeLabel.sizeToFit()
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: currentCharcodeLabel)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(reload))
     }
     
     @objc
@@ -92,7 +98,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.nameLabel.text = valute.name
         cell.charCodeLabel.text = valute.charCode
-        cell.valueLabel.text = "\(valute.value)"
+        
+        DataManager.getNewRates(inputCharCode: "\(valute.charCode)", baseCharCode: currentCharcode) { rate in
+            DispatchQueue.main.async {
+                let val = rate * self.nominal
+                cell.valueLabel.text = "\(val)"
+            }
+        }
         
         setupFlags(cell: cell, valute: valute)
         
@@ -115,14 +127,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             self?.currentCharcodeLabel.sizeToFit()
         }
         
+        currentCharcode = valute.charCode
+        nominal = Double(valute.nominal)
+        
         _ = tableView.cellForRow(at: indexPath) as! CustomTableViewCell
         tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    private func recalculate() {
-        
-    }
+
     
 }
 

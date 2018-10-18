@@ -11,6 +11,20 @@ import UIKit
 class DataManager {
     
     static var urlString = App.String.apiBaseUrl
+    
+    static func getNewRates(inputCharCode: String, baseCharCode: String, completion: @escaping (Double) -> ()) {
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            QueryService().getRates(inputCharCode: inputCharCode, baseCharCode: baseCharCode, completion: { (rates, errSTr) in
+                
+                if let rate = rates {
+                    completion(rate)
+                }
+                
+            })
+            
+        }
+    }
 
     static func getData(completion: @escaping ([Valute]) -> ()) {
         DispatchQueue.global(qos: .userInteractive).async {
