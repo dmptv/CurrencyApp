@@ -12,10 +12,11 @@ class QueryService {
     
     typealias JSONDictionary = [String: Any]
     typealias QueryResult = ([Valute]?, String) -> Void
-    typealias QueryRates = (Double?, String) -> Void
+    typealias QueryRates = (Double, String) -> Void
     
     var valutes: [Valute] = []
     var errorMessage = ""
+    var valuteRate: Double = 0
     
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
@@ -26,29 +27,32 @@ class QueryService {
         let strQuery = "\(baseCharCode)" + "_" + "\(inputCharCode)"
         dataTask?.cancel()
 
-        // https://free.currencyconverterapi.com/api/v6/convert?q=KZT_USD&compact=ultra
         
-        guard let url = URL(string: "https://free.currencyconverterapi.com/api/v6/convert?q=\(strQuery)&compact=ultra") else { return } // USD_RUB
+        guard let url = URL(string: "https://free.currencyconverterapi.com/api/v6/convert?q=\(strQuery)&compact=ultra") else { return }
         
         dataTask = defaultSession.dataTask(with: url) { data, response, error in
             defer { self.dataTask = nil }
-
+         
             if error != nil {
-                
+                self.errorMessage += "Error happens"
             } else if let data = data,
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 
                 let resRate = try! JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
                 
-                if let resRate = resRate {
+                if let resRate = resRate, let key = resRate.keys.first  {
+                    if  resRate[key] as? String == "status" {
+                        self.errorMessage += "Don't spam! Wait a bit"
+                    }
                     
-                    completion(resRate[resRate.keys.first!] as? Double, "")
-
+                    completion(resRate[key] as! Double, self.errorMessage)
                 }
             }
         }
         dataTask?.resume()
+        
+        completion(self.valuteRate, self.errorMessage)
     }
     
     func getCurrency(urlStr: String, completion: @escaping QueryResult) {
@@ -70,6 +74,10 @@ class QueryService {
                     DispatchQueue.main.async {
                         completion(self.valutes, self.errorMessage)
                     }
+                }
+                
+                DispatchQueue.main.async {
+                    completion(self.valutes, self.errorMessage)
                 }
             }
             dataTask?.resume()

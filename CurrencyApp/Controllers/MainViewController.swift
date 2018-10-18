@@ -17,7 +17,6 @@ class MainViewController: UIViewController {
     var valutes: [Valute] = []
     
     var currentCharcode = "USD"
-    var nominal: Double = 1
 
     
     override func viewDidLoad() {
@@ -99,10 +98,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nameLabel.text = valute.name
         cell.charCodeLabel.text = valute.charCode
         
-        DataManager.getNewRates(inputCharCode: "\(valute.charCode)", baseCharCode: currentCharcode) { rate in
+        DataManager.getNewRates(inputCharCode: "\(valute.charCode)", baseCharCode: currentCharcode) { rate, errorStr in
+            
+            if errorStr != "" {
+                // show alert
+                
+                let alertController = UIAlertController(title: errorStr,
+                                                        cancelTitle: "")
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
             DispatchQueue.main.async {
-                let val = rate * self.nominal
-                cell.valueLabel.text = "\(val)"
+                cell.valueLabel.text = "\(rate)"
             }
         }
         
@@ -128,7 +136,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         currentCharcode = valute.charCode
-        nominal = Double(valute.nominal)
         
         _ = tableView.cellForRow(at: indexPath) as! CustomTableViewCell
         tableView.reloadData()

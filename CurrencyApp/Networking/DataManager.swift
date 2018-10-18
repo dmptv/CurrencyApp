@@ -9,17 +9,16 @@
 import UIKit
 
 class DataManager {
+    typealias QueryRates = (Double, String) -> Void
     
     static var urlString = App.String.apiBaseUrl
     
-    static func getNewRates(inputCharCode: String, baseCharCode: String, completion: @escaping (Double) -> ()) {
+    static func getNewRates(inputCharCode: String, baseCharCode: String, completion: @escaping QueryRates) {
         DispatchQueue.global(qos: .userInteractive).async {
             
-            QueryService().getRates(inputCharCode: inputCharCode, baseCharCode: baseCharCode, completion: { (rates, errSTr) in
+            QueryService().getRates(inputCharCode: inputCharCode, baseCharCode: baseCharCode, completion: { (rate, errSTr) in
                 
-                if let rate = rates {
-                    completion(rate)
-                }
+                completion(rate, errSTr)
                 
             })
             

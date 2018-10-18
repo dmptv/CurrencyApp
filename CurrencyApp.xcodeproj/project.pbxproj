@@ -11,6 +11,7 @@
 		9D2478852177474400B0A587 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2478842177474400B0A587 /* DataManager.swift */; };
 		9D24788821775F1C00B0A587 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788721775F1C00B0A587 /* QueryService.swift */; };
 		9D24788C21777ECA00B0A587 /* Image+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24788B21777ECA00B0A587 /* Image+Extentions.swift */; };
+		9D2478AD21785DA300B0A587 /* UIAlertController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2478AC21785DA300B0A587 /* UIAlertController+Extentions.swift */; };
 		9DA7048D2177007800113B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7048C2177007800113B38 /* AppDelegate.swift */; };
 		9DA7048F2177007800113B38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7048E2177007800113B38 /* MainViewController.swift */; };
 		9DA704922177007800113B38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA704902177007800113B38 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		9D2478842177474400B0A587 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9D24788721775F1C00B0A587 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		9D24788B21777ECA00B0A587 /* Image+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extentions.swift"; sourceTree = "<group>"; };
+		9D2478AC21785DA300B0A587 /* UIAlertController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extentions.swift"; sourceTree = "<group>"; };
 		9DA704892177007800113B38 /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA7048C2177007800113B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA7048E2177007800113B38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				9DA704A221771DCC00113B38 /* UIViewController+Extentions.swift */,
 				9D24788B21777ECA00B0A587 /* Image+Extentions.swift */,
+				9D2478AC21785DA300B0A587 /* UIAlertController+Extentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				9DA704A82177215F00113B38 /* CustomTableViewCell.swift in Sources */,
 				9DA704AF217733C000113B38 /* ReuseIdentifierProtocol.swift in Sources */,
 				9D24788821775F1C00B0A587 /* QueryService.swift in Sources */,
+				9D2478AD21785DA300B0A587 /* UIAlertController+Extentions.swift in Sources */,
 				9DA704A121771DA100113B38 /* StoryboardIdentifiable.swift in Sources */,
 				9DA7048F2177007800113B38 /* MainViewController.swift in Sources */,
 				9DA7048D2177007800113B38 /* AppDelegate.swift in Sources */,
